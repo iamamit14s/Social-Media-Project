@@ -21,7 +21,7 @@ const postListReducer = (currPostList, action) => {
   return newPostList;
 };
 
-const PostListProvider = ({ children }) => {
+const PostListProvider = ({children}) => {
   const [postList, dispatchPostList] = useReducer(postListReducer, []);
 
   const addPost = (userId, postTitle, postBody, reactions, tags) => {
